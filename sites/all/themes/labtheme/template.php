@@ -10,7 +10,7 @@
  */
 function labtheme_preprocess_page(&$variables) {
   if (!empty($variables['page']['left_column'])) {
-    $variables['content_column_class'] = ' class="col-md-9 col-sm-12"';
+    $variables['content_column_class'] = ' class="col-md-8 col-sm-12"';
   }
   if (!empty($variables['page']['right_column'])) {
     $variables['content_column_class'] = ' class="col-md-8 col-sm-12"';

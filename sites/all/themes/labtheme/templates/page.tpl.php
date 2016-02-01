@@ -75,12 +75,17 @@
 ?>
 <?php
   $logo_width = 'col-sm-9';
+  $home_class = '';
   if (!empty($page['header_center'])) {
-    $logo_width = 'col-sm-6';
+    $logo_width = 'col-sm-4';
+  }
+  if ($is_front) {
+    $home_class="homepage";
   }
 ?>
 
 <header role="banner" class="">
+  <div class="header-stroke"></div>
   <div class="container">
     <div class="header-logo row">
       <?php if ($logo): ?>
@@ -91,7 +96,7 @@
         </div>
       <?php endif; ?>
     <?php if (!empty($page['header_center'])): ?>
-      <div class="col-sm-3">
+      <div class="col-sm-5">
         <?php print render($page['header_center']); ?>
       </div>
     <?php endif; ?>
@@ -137,9 +142,9 @@
 <div class="main-container content-area-color">
   <div class="container">
     <div class="row">
-    <div class="main-container-margin">
+    <div class="main-container-margin <?php echo $home_class; ?>">
     <?php if (!empty($page['left_column'])): ?>
-      <aside class="col-sm-3 hidden-xs" role="complementary">
+      <aside class="col-sm-4 hidden-xs" role="complementary">
         <?php print render($page['left_column']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>

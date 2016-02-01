@@ -1,103 +1,14 @@
 //@import '../bootstrap_sass/bootstrap.scss';
 @import 'fonts.scss';
+@import 'variables.scss';
 
-
-/* Mixins */
-@mixin menustyle {
-	float: left;
-	list-style: none;
+.relative {
+  position: relative;
 }
 
-@mixin border ($type, $size, $color) {
-  border-#{$type}-width: $size;
-  border-#{$type}-style: solid;
-  border-#{$type}-color: $color;
+.btn-primary {
+  background: $dk-blue;
 }
-
-
-/* Variables */
-
-/* Generic colors */
-$dk-blue: #17334b;
-$med-blue: #477aa6;
-$lt-blue: #9bc7ed;
-$dk-gray: #404347;
-$gray: #5C6470;
-$lt-gray: #ddd;
-$lt-bluegray: #c2ccd0;
-$white: #fff;
-
-
-/* fonts */
-$body-font: 'OpenSansRegular';
-$bold-font: 'OpenSansBold';
-$lt-font: 'OpenSansLight';
-
-    
-$header-color: $dk-blue;
-$header-padding: 30px 0;
-
-$search-position: 20px 0 0 0;
-$content-area-color: $white;
-
-$hero-position: 50px 0 0 30px;
-$hero-size: 3.0em;
-$hero-color: $white;
-$hero-style: $bold-font;
-$hero-img-ht: 400px;
-$hero-img-img: url('../images/hero_img2_reduced.jpg') 0 0 no-repeat;
-
-
-
-/* navbar */
-$nav-color: $med-blue;
-$navlink-bkgrd-active: $lt-blue;
-$navlink-link: $white;
-$navlink-link-active: $med-blue;
-$navlink-padding: 15px 15px 15px 15px;
-$navlink-size: 20px;
-
-/* submenu */
-$submenu-color: $white;
-$submenu-link-bkgrd-active: $lt-gray;
-$submenu-link-link: $med-blue;
-$submenu-link-link-active: $dk-blue;
-$submenu-link-padding: 15px 15px 15px 15px;
-$submenu-link-size: 1.2em;
-
-
-
-
-/* Main content */
-$body-color: $dk-gray;
-$body-size: 1.3em;
-$link-color: $med-blue;
-
-$main-container-margin: 40px 0 0 0;
-$main-content-margin: 0 60px 80px 30px;
-
-/*
-$h2-color:
-$h3-color:
-*/
-$h1-size: 3.0em;
-$h1-color: $dk-blue;
-$h1-style: $lt-font;
-/*
-$h2-size:
-$h3-size:
-*/
-
-
-
-$footer-color: $gray;
-$footer-border-color: $lt-bluegray;
-
-
-
-
-$footer-legal-size: 1.1em;
-$footer-font-color: $white;
 
 
 body {
@@ -125,15 +36,31 @@ header {
   background: $header-color;
   padding: $header-padding;
   .logo img {
-    margin-top: 20px;
+    //margin-top: 20px;
   }
   .block-search {
     margin: $search-position;
+  }
+  .header-stroke {
+    position: absolute;
+    width: 100%;
+    height: 63px;
+    @include border('bottom', 3px, $teal);
+  }
+  .shields-spacing {
+    margin-top: 36px;
+  }
+  .search-spacing {
+    margin-top: 43px;
+    padding: 0 15px;
+    background: $white;
   }
 }
 
 .navbar-color {
   background: $nav-color;
+  @include border('top', 1px, $red);
+  font-family: $navlink-font;
 }
 
 .navbar-nav > li > a {
@@ -152,8 +79,8 @@ header {
 
 .hero {
   width: auto;
-  @include border(top, 3px, $header-color);
-  @include border(bottom, 3px, $header-color);
+  //@include border(top, 3px, $header-color);
+  //@include border(bottom, 3px, $header-color);
   h1 {
     font-size: $hero-size;
     color: $hero-color;
@@ -204,9 +131,39 @@ header {
   margin: $main-container-margin;
 }
 
+.main-container-margin.homepage {
+  margin: 0;
+  aside {
+    background: $teal;
+  }
+}
+
 .main-content-margin {
   margin: $main-content-margin;
 }
+
+.homepage {
+  h1 {
+    font-size: 1.9em;
+    line-height: 1.4em;
+    letter-spacing: -0.01em;
+    //margin-top: 0;
+  }
+}
+
+.home-news {
+  font-family: $reg-font;
+  padding: 30px 20px;
+  color: $white;
+  h2 {
+    font-family: $lt-font;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
 
 footer {
   @include border(top, 5px, $footer-border-color);
