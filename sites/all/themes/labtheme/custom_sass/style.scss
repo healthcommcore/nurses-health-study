@@ -38,6 +38,8 @@ h2 {
   margin: $h2-margin;
 }
 
+.view-news .views-field-title,
+.view-nhs-pis .views-field-title,
 h3 {
   font-size: $h3-size;
   color: $h3-color;
@@ -184,16 +186,17 @@ header {
   padding: 30px 20px;
   color: $white;
   font-size: 0.88em;
+  h2, .views-field-title, a {
+    color: $white;
+  }
   h2 {
     font-family: $lt-font;
     font-size: 2.0em;
-    color: $white;
     @include border('bottom', 1px, $white);
     display: inline-block;
     margin-bottom: 20px;
   }
   a {
-    color: $white;
     text-decoration: underline;
   }
   .views-field-title,
@@ -207,6 +210,20 @@ header {
 
 .table {
   font-size: 0.8em;
+}
+
+.view-news,
+.view-nhs-pis {
+  .views-row {
+    margin-bottom: 30px;
+  }
+}
+
+.view-nhs-pis {
+  .views-field-field-staff-photo img {
+    float: left;
+    margin: 8px 20px 0 0;
+  }
 }
 
 footer {
