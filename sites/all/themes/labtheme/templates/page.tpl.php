@@ -189,13 +189,18 @@
 <div class="footer container">
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
+			<?php if (!empty($page['footer_mark'])): ?>
+				<div class="col-md-3 footer-mark">
+					<?php print render($page['footer_mark']); ?>
+				</div>
+			<?php endif; ?>
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
+				<div class="col-md-3 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
+				<div class="col-md-6 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>

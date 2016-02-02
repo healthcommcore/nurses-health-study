@@ -20,6 +20,7 @@ $lt-blue: #9bc7ed;
 $gray: #5C6470;
 $lt-bluegray: #c2ccd0;
 $white: #fff;
+$black: #000;
 
 /* NHS colors */
 $red: #B51927;
@@ -27,7 +28,6 @@ $teal: #31A9AB;
 $dk-blue: #0C3F79;
 $dk-gray: #8B97A2;
 $lt-gray: #B9C1C7;
-
 
 /* fonts */
 $body-font: 'OpenSansLight';
@@ -62,37 +62,45 @@ $navlink-font: 'OpenSansRegular';
 
 /* submenu */
 $submenu-color: $white;
-$submenu-link-bkgrd-active: $lt-gray;
-$submenu-link-link: $med-blue;
-$submenu-link-link-active: $dk-blue;
+$submenu-link-bkgrd-active: none;
+$submenu-link-link: $red;
+$submenu-link-link-active: $red;
 $submenu-link-padding: 15px 15px 15px 15px;
-$submenu-link-size: 1.2em;
+$submenu-link-size: 1.1em;
+$submenu-link-font: $reg-font;
 
 
 /* Main content */
-$body-color: $dk-gray;
+$body-color: $black;
 $body-size: 1.45em;
+$body-height: 1.5em;
 $link-color: $red;
 
-$main-container-margin: 40px 0 0 0;
-$main-content-margin: 0 0 80px 50px;
+$main-container-margin: 70px 0 0 0;
+$main-content-margin: 0 0 120px 50px;
 
-/*
-$h2-color:
-$h3-color:
-*/
-$h1-size: 3.0em;
+
+$h1-size: 2.2em;
 $h1-color: $dk-blue;
 $h1-style: $lt-font;
-/*
-$h2-size:
-$h3-size:
-*/
+$h1-height: 1.2em;;
+
+$h2-size: 1.35em;
+$h2-color: $black;
+$h2-style: $reg-font;
+$h2-height: 1.5em;;
+$h2-margin: 20px 0 0 0;
+
+$h3-size: 1.0em;
+$h3-color: $black;
+$h3-style: $bold-font;
+$h3-height: 1.0em;
+$h3-margin: 20px 0 3px 0;
 
 
 
-$footer-color: $gray;
-$footer-border-color: $lt-bluegray;
+$footer-color: $lt-gray;
+$footer-border-color: $dk-gray;
 
 
 
@@ -100,4 +108,10 @@ $footer-border-color: $lt-bluegray;
 $footer-legal-size: 1.1em;
 $footer-font-color: $white;
 
+h1, h2, h3, h4, strong {
+  font-weight: normal;
+}
 
+strong {
+  font-family: $bold-font;
+}

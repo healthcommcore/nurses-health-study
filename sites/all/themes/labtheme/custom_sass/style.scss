@@ -22,14 +22,28 @@ a {
   color: $link-color;
 }
 
-h1, h2, h3, h4, strong {
-  font-weight: normal;
-}
 
 h1 {
   font-size: $h1-size;
   color: $h1-color;
   font-family: $h1-style;
+  line-height: $h1-height;
+}
+
+h2 {
+  font-size: $h2-size;
+  color: $h2-color;
+  font-family: $h2-style;
+  line-height: $h2-height;
+  margin: $h2-margin;
+}
+
+h3 {
+  font-size: $h3-size;
+  color: $h3-color;
+  font-family: $h3-style;
+  line-height: $h3-height;
+  margin: $h3-margin;
 }
 
 header {
@@ -95,22 +109,32 @@ header {
 }
 
 .submenu {
+  @include border(top, 13px, $red);
+  margin-top: 10px;
+  padding-top: 40px;
+  text-align: right;
   //margin: 30px 20px 0 0;
-  //font-family: $sinkin-semibold;
+  font-family: $submenu-link-font;
   font-size: $submenu-link-size;
-  //text-align: right;
   .nav {
+    width: 80%;
+    float: right;
+    margin-top: 5px;
     li {
       a {
         font-weight: normal;
         color: $submenu-link-link;
-        //padding: 10px 0;
+        display: inline-block;
+        @include border(bottom, 5px, $white);
+        padding: 3px 0 3px 18px;
+        margin-bottom: 26px;
       }
       a:hover,
       a:focus,
       a.active-trail {
         color: $submenu-link-link-active;
         background: $submenu-link-bkgrd-active;
+        border-color: $red;
       }
       a.active-trail {
       }
@@ -142,12 +166,16 @@ header {
   margin: $main-content-margin;
 }
 
+.page-content {
+  line-height: $body-height;
+}
+
 .homepage {
   h1 {
     font-size: 1.9em;
-    line-height: 1.4em;
+    line-height: 1.3em;
     letter-spacing: -0.01em;
-    //margin-top: 0;
+    margin: 25px 0 30px 0;
   }
 }
 
@@ -155,28 +183,56 @@ header {
   font-family: $reg-font;
   padding: 30px 20px;
   color: $white;
+  font-size: 0.88em;
   h2 {
     font-family: $lt-font;
+    font-size: 2.0em;
+    color: $white;
+    @include border('bottom', 1px, $white);
+    display: inline-block;
+    margin-bottom: 20px;
   }
   a {
     color: $white;
     text-decoration: underline;
   }
+  .views-field-title,
+  .views-field-field-date {
+    font-family: $bold-font;
+  }
+  .views-row {
+    margin-bottom: 20px;
+  }
 }
 
+.table {
+  font-size: 0.8em;
+}
 
 footer {
-  @include border(top, 5px, $footer-border-color);
+  @include border(top, 20px, $footer-border-color);
 }
 
 .footer {
   border-top: none;
-  margin-top:25px;
+  margin-top: 0;
+}
+
+.footer-legal,
+.footer-mark {
+  margin-top: 30px;
+}
+
+.footer-logos {
+  p {
+    margin-bottom: 20px;
+  }
 }
 
 .footer-legal {
   font-size: $footer-legal-size;
   color: $footer-font-color;
+  font-family: $bold-font;
   p {
     margin: 0;
   }
