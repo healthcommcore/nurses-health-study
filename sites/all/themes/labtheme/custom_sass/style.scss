@@ -28,6 +28,7 @@ h1 {
   color: $h1-color;
   font-family: $h1-style;
   line-height: $h1-height;
+  margin: $h1-margin;
 }
 
 h2 {
@@ -110,10 +111,12 @@ header {
   }
 }
 
-.submenu {
+.red-border {
   @include border(top, 13px, $red);
-  margin-top: 10px;
-  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.submenu {
   text-align: right;
   //margin: 30px 20px 0 0;
   font-family: $submenu-link-font;
@@ -121,7 +124,7 @@ header {
   .nav {
     width: 80%;
     float: right;
-    margin-top: 5px;
+    margin-top: 20px;
     li {
       a {
         font-weight: normal;
@@ -219,6 +222,18 @@ header {
   }
 }
 
+.view-news {
+  .more-link a {
+    display: inline-block;
+    text-decoration: none;
+    border: $white 1px solid;
+    padding: 5px 15px 6px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-family: $lt-font;
+  }
+}
+
 .view-nhs-pis {
   .views-field-field-staff-photo img {
     float: left;
@@ -226,11 +241,36 @@ header {
   }
 }
 
-.newsletter {
-  padding: 15px 20px;
-  img {
-    max-height: 240px;
+.view-newsletters {
+  .view-header {
+    margin-bottom: 30px;
   }
+  .newsletter {
+    margin-bottom: 30px;
+    padding-right: 20px;
+    img {
+      max-height: 240px;
+    }
+  }
+  .col-md-4.newsletter {
+    padding-left: 0;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+
+.no-bullets {
+  list-style: none;
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.img-float {
+  float: left;
+  margin: 5px 20px 3px 0;
 }
 
 footer {
