@@ -226,6 +226,13 @@ header {
   }
 }
 
+.newsletter {
+  padding: 15px 20px;
+  img {
+    max-height: 240px;
+  }
+}
+
 footer {
   @include border(top, 20px, $footer-border-color);
 }
@@ -284,6 +291,11 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+.newsletter {
+  img {
+    max-height: 200px;
+  }
+}
 }
 
 @media (max-width: 991px) {
