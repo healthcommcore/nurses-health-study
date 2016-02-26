@@ -77,7 +77,7 @@
   $logo_width = 'col-sm-9';
   $home_class = '';
   if (!empty($page['header_center'])) {
-    $logo_width = 'col-md-3';
+    $logo_width = 'col-md-3 col-sm-3';
   }
   if ($is_front) {
     $home_class="homepage";
@@ -96,12 +96,12 @@
         </div>
       <?php endif; ?>
     <?php if (!empty($page['header_center'])): ?>
-      <div class="col-lg-6 col-md-5">
+      <div class="col-lg-6 col-md-5 col-sm-4">
         <?php print render($page['header_center']); ?>
       </div>
     <?php endif; ?>
     <?php if (!empty($page['header_right'])): ?>
-      <div class="col-lg-3 col-md-4">
+      <div class="col-lg-3 col-md-4 col-sm-5">
         <?php print render($page['header_right']); ?>
       </div>
     <?php endif; ?>

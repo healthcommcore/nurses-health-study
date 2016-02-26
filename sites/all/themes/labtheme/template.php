@@ -10,10 +10,10 @@
  */
 function labtheme_preprocess_page(&$variables) {
   if (!empty($variables['page']['left_column'])) {
-    $variables['content_column_class'] = ' class="col-md-8 col-sm-12"';
+    $variables['content_column_class'] = ' class="col-sm-8"';
   }
   if (!empty($variables['page']['right_column'])) {
-    $variables['content_column_class'] = ' class="col-md-8 col-sm-12"';
+    $variables['content_column_class'] = ' class="col-sm-8"';
   }
 	if ( isset($variables['navbar_classes_array']) ) {
 		if ($index = array_search('container', $variables['navbar_classes_array']) ) {
