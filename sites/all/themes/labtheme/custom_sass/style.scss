@@ -41,7 +41,7 @@ h2 {
 
 .view-news .views-field-title,
 .view-nhs-pis .views-field-title,
-h3 {
+th, h3 {
   font-size: $h3-size;
   color: $h3-color;
   font-family: $h3-style;
@@ -212,7 +212,13 @@ header {
 }
 
 .table {
-  font-size: 0.8em;
+  //font-size: 0.8em;
+  th {
+    font-weight: normal;
+  }
+  th:last-child {
+    text-align: center;
+  }
 }
 
 .view-news,
