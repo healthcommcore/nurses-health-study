@@ -77,7 +77,7 @@
   $logo_width = 'col-sm-9';
   $home_class = '';
   if (!empty($page['header_center'])) {
-    $logo_width = 'col-sm-4';
+    $logo_width = 'col-md-3';
   }
   if ($is_front) {
     $home_class="homepage";
@@ -91,17 +91,17 @@
       <?php if ($logo): ?>
       <div class="<?php print $logo_width; ?>">
           <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
         </div>
       <?php endif; ?>
     <?php if (!empty($page['header_center'])): ?>
-      <div class="col-sm-5">
+      <div class="col-lg-6 col-md-5">
         <?php print render($page['header_center']); ?>
       </div>
     <?php endif; ?>
     <?php if (!empty($page['header_right'])): ?>
-      <div class="col-sm-3">
+      <div class="col-lg-3 col-md-4">
         <?php print render($page['header_right']); ?>
       </div>
     <?php endif; ?>
