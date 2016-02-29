@@ -75,12 +75,14 @@
 ?>
 <?php
   $logo_width = 'col-sm-9';
+  $left_col_vis = 'hidden-xs';
   $home_class = '';
   if (!empty($page['header_center'])) {
-    $logo_width = 'col-md-3 col-sm-3';
+    $logo_width = 'col-md-3 col-sm-3 col-xs-6';
   }
   if ($is_front) {
     $home_class="homepage";
+    //$left_col_vis = '';
   }
 ?>
 
@@ -96,12 +98,12 @@
         </div>
       <?php endif; ?>
     <?php if (!empty($page['header_center'])): ?>
-      <div class="col-lg-6 col-md-5 col-sm-4">
+      <div class="col-lg-6 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
         <?php print render($page['header_center']); ?>
       </div>
     <?php endif; ?>
     <?php if (!empty($page['header_right'])): ?>
-      <div class="col-lg-3 col-md-4 col-sm-5">
+      <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
         <?php print render($page['header_right']); ?>
       </div>
     <?php endif; ?>
@@ -144,12 +146,12 @@
     <div class="row">
     <div class="main-container-margin <?php echo $home_class; ?>">
     <?php if (!empty($page['left_column'])): ?>
-      <aside class="col-sm-4 hidden-xs" role="complementary">
+    <aside id="left-col" class="col-sm-4 <?php print $left_col_vis; ?>" role="complementary">
         <?php print render($page['left_column']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 
-    <section<?php print $content_column_class; ?>>
+    <section id="main-col"<?php print $content_column_class; ?>>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <div class="main-content-margin">

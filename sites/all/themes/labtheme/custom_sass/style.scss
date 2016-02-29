@@ -373,6 +373,9 @@ footer {
 }
 
 @media (max-width: 991px) {
+  header {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -427,30 +430,153 @@ footer {
     }
   }
 
-.submenu {
-  //margin: 30px 20px 0 0;
-  font-size: 1.0em;
-  .nav {
-    margin-top: 12px;
-    li {
-      a {
-        padding: 3px 0 3px 12px;
-        margin-bottom: 15px;
-      }
-      a:hover,
-      a:focus,
-      a.active-trail {
-      }
-      a.active-trail {
+  .submenu {
+    //margin: 30px 20px 0 0;
+    font-size: 1.0em;
+    .nav {
+      margin-top: 12px;
+      li {
+        a {
+          padding: 3px 0 3px 12px;
+          margin-bottom: 15px;
+        }
+        a:hover,
+        a:focus,
+        a.active-trail {
+        }
+        a.active-trail {
+        }
       }
     }
   }
-}
 
 
 
 }
 
 @media (max-width: 767px) {
-}
+  h1 {
+    font-size: 1.8em;
+  }
 
+  header {
+    padding: 10px 12px 5px;
+    .header-stroke {
+      height: 30px;
+    }
+    .shields-spacing {
+      margin-top: 10px;
+    }
+    .search-spacing {
+      margin-top: 15px;
+    }
+  }
+
+  .hero {
+    .hero-img {
+      height: 150px;
+    }
+  }
+
+  .navbar-color {
+    border: none;
+  }
+
+  .navbar-header {
+    background: $white;
+    @include border(top, 1px, $red); 
+    @include border(bottom, 1px, $red); 
+    .navbar-toggle {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border-color: $red;
+      padding: 7px;
+      .icon-bar {
+        background: $red;
+      }
+    }
+    .navbar-toggle:hover {
+      background: $red;
+      .icon-bar {
+        background: $white;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    display: inline-block;
+    position: relative;
+    float: none;
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-menu > li > a {
+    font-size: 1.1em;
+    color: $red;
+    padding: 9px 0 2px 33px;
+    margin-bottom: 7px;
+  }
+
+  .nav {
+    .dropdown-menu > li > a.active,
+    .dropdown-menu > li.active-trail > a,
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus {
+      color: #000;
+      background: none;
+    }
+  }
+
+
+
+  .main-container-margin {
+    margin-top: 0;
+  }
+
+  .main-content-margin {
+    margin: 0 0 40px 0;
+  }
+
+  .homepage {
+    h1 {
+      font-size: 1.35em;
+    }
+  }
+
+  .footer-mark,
+  .footer-logos,
+  .footer-legal,
+  .footer-legal .legal {
+    text-align: center;
+  }
+
+  .footer-mark img,
+  .footer-logos a {
+    display: inline-block;
+  }
+  
+  .footer-mark {
+    margin-bottom: 25px;
+    img {
+      width: 170px;
+    }
+  }
+
+  .footer-mark {
+    margin-top: 0;
+  }
+
+  .footer-logos p {
+    margin-bottom: 15px;
+  }
+
+  .footer-legal {
+    ul {
+      float: none;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
