@@ -377,6 +377,7 @@ footer {
 
 @media (min-width: 768px) and (max-width: 991px) {
   header {
+    overflow: hidden;
     padding: 17px 22px;
     .header-stroke {
       height: 35px;
@@ -407,6 +408,7 @@ footer {
   }
 
   .home-news {
+    padding: 23px 13px;
     h2 {
       font-size: 1.8em;
       line-height: 1.2em;
@@ -418,6 +420,34 @@ footer {
       margin-left: 30px;
     }
   }
+
+  .view-news {
+    .more-link a {
+      font-size: 1.1em;
+    }
+  }
+
+.submenu {
+  //margin: 30px 20px 0 0;
+  font-size: 1.0em;
+  .nav {
+    margin-top: 12px;
+    li {
+      a {
+        padding: 3px 0 3px 12px;
+        margin-bottom: 15px;
+      }
+      a:hover,
+      a:focus,
+      a.active-trail {
+      }
+      a.active-trail {
+      }
+    }
+  }
+}
+
+
 
 }
 
